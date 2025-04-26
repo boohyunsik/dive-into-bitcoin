@@ -7,4 +7,5 @@ export interface Block {
     transactions: Transaction[];
     nonce: number;
     hash: string;
+    merkleRoot: string;
 }

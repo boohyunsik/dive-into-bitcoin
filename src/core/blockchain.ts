@@ -16,7 +16,8 @@ export class Blockchain {
             timestamp: Date.now(),
             transactions: [],
             nonce: 0,
-            hash: "GENESIS_HASH"
+            hash: "GENESIS_HASH",
+            merkleRoot: "GENESIS_MERKLE_ROOT"
         };
     }
 

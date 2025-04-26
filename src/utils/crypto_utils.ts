@@ -5,6 +5,10 @@ import {ec as EC} from "elliptic";
 
 const ec = new EC("secp256k1");
 
+export function sha256(data: string): string {
+    return crypto.createHash("sha256").update(data).digest("hex");
+}
+
 export function calculateHash(block: Block): string {
     const data = block.index + block.previousHash + block.timestamp + JSON.stringify(block.transactions) + block.nonce;
     return crypto.createHash("sha256").update(data).digest("hex");

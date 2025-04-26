@@ -70,6 +70,7 @@ export class P2pNode {
             transactions: validTransactions,
             nonce: 0,
             hash: "",
+            merkleRoot: "",
         };
         const minedBlock = this.miner.mineBlock(newBlock);
         this.blockchain.addBlock(minedBlock);
